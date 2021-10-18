@@ -1,82 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Imy320</title>
     <link rel="stylesheet" href="css/globalStyles.css">
-    <link rel="stylesheet" href="css/innerContent.css">
+    <link rel="stylesheet" href="css/projectPageStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://stark-reef-50136.herokuapp.com/https://kit.fontawesome.com/a076d05399.js'
+        crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='*'></script>
-    
     <script src="particles.js"></script>
-
 </head>
+
 <body>
-<div class="nav">
-    <div class="logo">
-        <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
-    </div>
-    <ul class='navbar'>
-        <li><a href="iotWaterMonitoring.html" class="active">IoT Water Monitoring</a></li>
-        <li><a href="cryptoEcommerce.html">Crypto E-Commerce</a></li>
-        <li><a href="facialRecognition.html">AI Facial Recognition</a></li>
-        <li><a href="shortestPath.html">A* Shortest Path</a></li>
-        <li><a href="merchandise.html">Merchandise</a></li>
-    </ul>
-    <div>
-        <ul>
-            <li class="userIcon"><a href="#"> <i class='fa fa-user-circle' style='font-size:36px'></i></a></li>
-            <li><hr class="divisor"></li>
-            <li class="shoppingCart"><a href="#"><i class="fa fa-shopping-cart fa_custom fa-2x"></i></a></li>
+    <div class="nav">
+        <div class="logo">
+            <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
+        </div>
+        <ul class='navbar'>
+            <li><a href="iotWaterMonitoring.html" class="active">Projects</a></li>
+            <li><a href="cryptoEcommerce.html">About Us</a></li>
+            <li><a href="facialRecognition.html">Contact Us</a></li>
+            <li><a href="merchandise.html">Merchandise</a></li>
         </ul>
     </div>
-</div>
-<div id="bubbleBackdrop"></div>
+    <div id="bubbleBackdrop"></div>
 
-<div class="contentSection">
-    <div class="innerContent">
-
-        <img class="iotImage" src="img/image-1@1x.png" alt="iotWaterSensor">
-
-
-        <div class="iotDescription">
-            Smart Water Monitoring.
-            <p class="projectDescription">
-                <br>
-                With smart devices and a convenient mobile/web application <br> you can monitor remote
-                water resources from the palm of your hand
-            </p>
-            <ul class="iotList">
-                <li>Water Level analytics.</li>
-                <li>Optimal Device placement.</li>
-                <li>Automated notifications & automated scheduling.</li>
-            </ul>
-        </div>
-
-        <div class="bottomright">
-            <a class="next" href="cryptoEcommerce.html"><i id="next" class='fa fa-arrow-circle-right' style='font-size:80px'></i></a>
+    <div class="contentSection">
+        <div class="contentContainer">'
+            <div class="imageContainer">
+                <img class="projectImage" src="img/image-1@1x.png" alt="iotWaterSensor">
+            </div>
+            <div class="iotDescription">
+                <h1 class="projectTitle">
+                    Smart Water Monitoring.
+                </h1>
+                <h3 class="projectDescription">
+                    With smart devices and a convenient mobile and web application you can monitor remote water
+                    resources from the palm of your hand.
+                </h3>
+                <ul class="iotList">
+                    <li>Water Level analytics.</li>
+                    <li>Optimal Device placement.</li>
+                    <li>Automated notifications & automated scheduling.</li>
+                </ul>
+            </div>
+            <div class="rightArrow">
+                <a class="nextButton" href="cryptoEcommerce.html"><i id="nextButton" class='fa fa-arrow-circle-right'
+                        style='font-size:80px'></i></a>
+            </div>
         </div>
     </div>
+    <div class="footer">
+        <p>Check out our latest update on
+            <a href="#">
+                <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
+            </a>
+        </p>
+    </div>
+    <script>
+
+        $(document).ready(function () {
 
 
-</div>
-<div class="footer">
-    <p>Check out our latest update on
-        <a href="#">
-            <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
-        </a>
-    </p>
-</div>
-<script>
 
-    $( document ).ready(function() {
-  
-  
-  
-        particlesJS.load('bubbleBackdrop','https://stark-reef-50136.herokuapp.com/https://jsonkeeper.com/b/WEQH');
-  
-    });
-  </script>
+            particlesJS.load('bubbleBackdrop', 'https://stark-reef-50136.herokuapp.com/https://jsonkeeper.com/b/WEQH');
+
+        });
+    </script>
 </body>
+
 </html>

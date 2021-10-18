@@ -1,7 +1,8 @@
 /* Opinionated CSS defaults based on:
   ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+
 html {
   line-height: 1.2;
   -webkit-text-size-adjust: 100%;
@@ -11,6 +12,73 @@ html {
 
 html, * {
   font-family: 'Montserrat', sans-serif;
+}
+
+#tDiv
+{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size:3vw;
+  top: 50%;
+  left: 45%;
+  transform: translate(-53%, -50%);
+  position: absolute;
+  color: #5b5b5b;
+
+}
+
+#bursting
+{
+  color: #5f89ec;
+}
+
+#pop
+{
+  color: #adda88;
+}
+
+
+#tDiv>p
+{
+  display:inline-block;
+
+}
+
+
+#listScrollBox
+{
+  height: 5vh;
+  display:inline-block;
+  overflow: hidden;
+
+
+}
+#listScroll
+{
+
+  margin: 0;
+  padding-left: 1vw;
+  text-align: left;
+  list-style: none;
+  animation-name: scroll;
+  display: inline-block;
+  color: #e88fee;
+  position: relative;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  top: -7px;
+
+}
+
+
+@keyframes scroll {
+   0% {transform:translate3d(0,0,0); }
+   17% {transform:translate3d(0,-34%,0);}
+   34% {transform:translate3d(0,-34%,0);}
+   51% {transform:translate3d(0,-68%,0);}
+   68% {transform:translate3d(0,-68%,0);}
+   86% {transform:translate3d(0,0,0);}  
+  100% {transform:translate3d(0,0,0);} 
 }
 
 body {

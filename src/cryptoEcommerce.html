@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imy320</title>
+    <link rel="stylesheet" href="css/globalStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/innerContent.css">
+    <script src='https://stark-reef-50136.herokuapp.com/https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="particles.js"></script>
+
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
+    </div>
+    <ul class='navbar'>
+        <li><a href="iotWaterMonitoring.html">IoT Water Monitoring</a></li>
+        <li><a href="cryptoEcommerce.html" class="active">Crypto E-Commerce</a></li>
+        <li><a href="facialRecognition.html">AI Facial Recognition</a></li>
+        <li><a href="shortestPath.html">A* Shortest Path</a></li>
+        <li><a href="merchandise.html">Merchandise</a></li>
+    </ul>
+    <div>
+        <ul>
+            <li class="userIcon"><a href="#"> <i class='fa fa-user-circle' style='font-size:36px'></i></a></li>
+            <li><hr class="divisor"></li>
+            <li class="shoppingCart"><a href="#"><i class="fa fa-shopping-cart fa_custom fa-2x"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div id="bubbleBackdrop"></div>
+
+<div class="contentSection">
+    <div class="innerContent">
+        <img class="iotImage" src="img/image-3@1x.png" alt="iotWaterSensor">
+        <div class="iotDescription">
+            E-Commerce Book Store.
+
+            <p class="projectDescription">
+                <br>
+                Manage your site with convenience, change listings,
+                add favorites and much more.
+            </p>
+
+            <ul class="iotList">
+                <li>Complete Book sales site, from listing to delivery.</li>
+                <li>Peer to peer crypto transactions.</li>
+                <li>AI Book recommender</li>
+            </ul>
+        </div>
+        <div class="bottomright">
+            <a class="next" href="facialRecognition.html"><i id="next" class='fa fa-arrow-circle-right' style='font-size:80px'></i></a>
+        </div>    </div>
+</div>
+<div class="footer">
+    <p>Check out our latest update on
+        <a href="#">
+            <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
+        </a>
+    </p>
+</div>
+<script>
+
+    $( document ).ready(function() {
+  
+  
+  
+        particlesJS.load('bubbleBackdrop','https://stark-reef-50136.herokuapp.com/https://jsonkeeper.com/b/WEQH');
+  
+    });
+  </script>
+</body>
+</html>
+

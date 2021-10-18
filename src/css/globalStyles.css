@@ -1,0 +1,265 @@
+/* Opinionated CSS defaults based on:
+  ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html {
+  line-height: 1.2;
+  -webkit-text-size-adjust: 100%;
+
+
+}
+
+html, * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+
+    margin: 0;
+
+}
+
+p {
+    margin: 0;
+}
+
+.contentSection {
+    margin-top: -87vh;
+
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-0%, -100%); */
+
+    text-align: center;
+    height: 87vh;
+    background-color:transparent;
+    position:sticky;
+
+}
+
+.footer {
+
+    text-align: center;
+    background-color: lightgrey;
+    width: 100%;
+    height: 4vh;
+    bottom: 0;
+
+}
+
+.nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #CAD2C5;
+    color: white;
+    padding: 0em 6em;
+    height: 9vh;
+    align-items: center;
+
+
+}
+
+.nav ul {
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.nav li {
+
+    list-style: none;
+
+}
+
+.nav a {
+
+    text-decoration: none;
+    color: #707070;
+    padding-right: 2em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+
+}
+
+
+.nav a #logoA{
+
+    text-decoration: none;
+    color: #707070;
+    padding-right: 0em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+  
+  }
+
+.nav a:hover {
+
+    color: #468aa8;
+
+}
+
+.navbar {
+
+    padding-top: 5px;
+
+}
+
+.navbar .active {
+
+    color: #468aa8;
+
+}
+
+
+.logo img {
+
+    padding-top: 4px;
+    height: 60px;
+
+}
+
+
+.userIcon a {
+
+    padding: 0;
+
+}
+
+.divisor {
+
+    transform: rotate(-90deg);
+    background-color: #707070;
+    border: 1px solid #707070;
+    width: 40px;
+    margin-top: 15px;
+
+}
+
+.innerContent {
+
+    padding-top: 17%;
+    padding-bottom: 20%
+
+}
+
+.innerContent button {
+
+    padding: 10px;
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    border: 2px solid #468AA8;
+
+    color: #468AA8;
+    background-color: #d9d9d9;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.innerContent button:hover {
+
+    padding: 10px;
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    border: 2px solid #468AA8;
+
+    color: white;
+    background-color: #707070;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.footer {
+
+    background-color: #707070;
+    /* padding-top: 15px; */
+    color: white;
+    /* padding-top: 7.9px; */
+    /* padding-bottom: 7.9px; */
+    display: flex;             /* establish flex container */
+    align-items: center;      
+    justify-content: center;
+  
+  }
+  
+  .footer a {
+  
+    width: 50px;
+    height: 50px;
+  
+  }
+  .footer p {
+  
+  position: relative;
+  top: -3px;
+  
+  
+  }
+  
+
+.next, #next {
+
+    position: relative;
+    color: #0f214b;
+    margin-top: 75px;
+
+}
+
+.next:hover, #next:hover {
+
+    color: #e69898;
+
+}
+
+@media only screen and (max-width: 1700px) {
+    .next, #next {
+
+        position: relative;
+        color: #0f214b;
+        margin-top: 20px;
+
+    }
+
+    .next:hover, #next:hover {
+
+        color: #e69898;
+
+    }
+}
+
+
+#bubbleBackdrop {
+    margin: 0 auto;
+    width:100%;
+    height:100vh;
+    z-index: -200;
+}
+
+
+.instaIcon {
+
+    padding-left: 10px;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    position: relative;
+}
+
+#bubbleBackdrop {
+    margin: 0 auto;
+    width:100%;
+    height:87vh;
+    z-index: -200;
+    background-color: antiquewhite;
+    position: relative;
+  }
+  
+  

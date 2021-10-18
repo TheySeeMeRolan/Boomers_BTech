@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Imy320</title>
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://stark-reef-50136.herokuapp.com/https://kit.fontawesome.com/a076d05399.js' crossorigin='*'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="particles.js"></script>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">
+    <a href="index.html"><img src="src/img/Boomerz.png" alt=""></a>
+  </div>
+  <ul class='navbar'>
+    <li><a href="src/iotWaterMonitoring.html">IoT Water Monitoring</a></li>
+    <li><a href="src/cryptoEcommerce.html">Crypto E-Commerce</a></li>
+    <li><a href="src/facialRecognition.html">AI Facial Recognition</a></li>
+    <li><a href="src/shortestPath.html">A* Shortest Path</a></li>
+    <li><a href="src/merchandise.html">Merchandise</a></li>
+  </ul>
+  <div>
+    <ul>
+      <li class="userIcon"><a href="#"> <i class='far fa-user-circle' style='font-size:36px'></i></a></li>
+      <li><hr class="divisor"></li>
+      <li class="shoppingCart"><a href="#"><i class="fa fa-shopping-cart fa_custom fa-2x"></i></a></li>
+    </ul>
+  </div>
+</div>
+<div id="bubbleBackdrop"></div>
+
+  <div class="contentSection">
+    <div class="innerContent">
+      <a href="src/iotWaterMonitoring.html">
+        <button>See more</button>
+      </a>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Check out our latest update on
+      <a href="#">
+        <img class="instaIcon" src="src/img/icon-awesome-instagram-1@1x.png" alt="">
+      </a>
+    </p>
+  </div>
+  <script>
+    $( document ).ready(function() {
+      particlesJS.load('bubbleBackdrop','homepageParticles.json');
+});
+</script>
+</body>
+</html>

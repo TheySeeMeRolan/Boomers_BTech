@@ -1,0 +1,128 @@
+.contentSection {
+
+    text-align: center;
+    height: 87vh;
+    background-color: antiquewhite;
+
+}
+
+.merchContainer {
+
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(4,3fr);
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.card {
+
+    display: flex;
+    background-color: grey;
+    font-size: 1em;
+    color: wheat;
+    height: 100%;
+    width: 300px;
+    border-radius: 5px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid grey;
+
+}
+
+.card img {
+
+    height: 200px;
+    width: 300px;
+    object-fit: contain;
+
+}
+
+.innerCard {
+    display: grid;
+}
+
+
+.innerContent {
+
+    padding-top: 5%;
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1700px) {
+
+    .merchContainer {
+
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4,3fr);
+        /*padding-left: 5em;*/
+        /*padding-right: 5em;*/
+
+    }
+
+    .innerContent {
+
+        padding-top: 2%;
+        padding-bottom: 0;
+
+    }
+
+}
+
+.productImage {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.productDetails {
+    padding-right: 10%;
+    padding-bottom: 20px;
+}
+
+
+.bottomDetails {
+    overflow: hidden;
+    /*border-top: 1px solid #eee;*/
+    padding-top: 20px;
+}
+
+.bottomDetails div {
+    float: left;
+    width: 50%;
+}
+
+.price {
+    font-size: 18px;
+    color:#e69898;
+    font-weight: 600;
+}
+
+
+.productLinks {
+    text-align: right;
+}
+
+.productLinks a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.productLinks a:hover {
+    color: #e69898;
+}

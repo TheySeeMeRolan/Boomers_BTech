@@ -3,16 +3,19 @@
     text-align: center;
     height: 87vh;
     background-color: antiquewhite;
-
+    /* modal styling */
+    position: relative;
+    left: 0;
 }
 
 .merchContainer {
-
     display: grid;
     gap: 4rem;
     grid-template-columns: repeat(4,3fr);
-    padding-left: 5em;
-    padding-right: 5em;
+    width: 100%;
+    justify-items: center;
+    /* modal styling */
+    position: absolute;
 }
 
 .card {
@@ -29,12 +32,40 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 2px solid grey;
 
 }
 
 .card img {
+
+    height: 200px;
+    width: 300px;
+    object-fit: contain;
+
+}
+
+.cardsOverlay {
+
+    display: flex;
+    background-color: grey;
+    font-size: 1em;
+    color: wheat;
+    height: 100%;
+    width: 300px;
+    border-radius: 5px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px solid grey;
+    opacity: 0.4;
+
+}
+
+.cardsOverlay img {
 
     height: 200px;
     width: 300px;
@@ -120,9 +151,211 @@
     margin-left: 5px;
     color: #e1e1e1;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .productLinks a:hover {
     color: #e69898;
+}
+
+
+.hiddenModal {
+    display: none;
+}
+
+.displayModal {
+    display: grid;
+    grid-template-columns: 0.5fr 11fr 0.5fr;
+    gap: 0;
+
+    width: 50%;
+    height: 80%;
+    margin-left: 25%;
+
+    border-radius: 10px;
+    background-color: rgba(123, 121, 121, 0.99);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    z-index: 9;
+}
+
+.modalContent {
+    /* background-color: #e1e1e1; */
+    display: grid;
+    grid-template-columns: repeat(2,6fr);
+}
+
+.leftModal {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: auto;
+    height: fit-content;
+    justify-content: center;
+    background-color: #7d7b7b;
+    padding: 10% 0 10% 0;
+    border: unset;
+}
+
+.rightModal {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20%;
+    height: auto;
+    color: whitesmoke;
+}
+
+.checked {
+    color: orange;
+}
+
+.fa .fa-star {
+    font-size: x-large;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+
+#leftModalPadding {
+    padding-top: 50%;
+    padding-right: 50%;
+    color: white;
+    font-size: large;
+}
+
+#leftModalPadding i:hover {
+    color: #e69898;
+    cursor: pointer;
+}
+
+.sizeOptions {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-evenly;
+    font-size: large;
+}
+
+.small, .medium, .large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5%;
+}
+
+.sizeOptions div:hover {
+    background-color: rgba(214, 214, 214, 0.26);
+    color: #707070;
+    cursor: pointer;
+}
+
+
+#active {
+    background-color: rgba(214, 214, 214, 0.26);
+    color: #707070;
+}
+
+.innerContent .purchaseSection .buyButton {
+    margin-top: 5%;
+    padding: 5px;
+    width: 130px;
+    height: 80px;
+    border: 2px solid #468AA8;
+
+    color: #468AA8;
+    background-color: #d9d9d9;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.innerContent .purchaseSection .buyButton:hover {
+    padding: 5px;
+    width: 130px;
+    height: 80px;
+    border: 2px solid #c48181;
+
+    color: white;
+    background-color: #e69898;
+    font-size: xx-large;
+    text-align: center;
+
+    cursor:pointer;
+}
+
+#modal .productDetails .bottomDetails {
+    display: grid;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.available {
+    padding-left: 15px;
+}
+
+#modal .modalContent .innerCard {
+    background-color: #468AA8;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    border-radius: 5px;
+}
+
+
+
+@media only screen and (min-width: 1700px) {
+    .displayModal {
+        display: grid;
+        grid-template-columns: 0.5fr 11fr 0.5fr;
+        gap: 0;
+
+        width: 50%;
+        height: 75%;
+        margin-left: 25%;
+
+        border-radius: 10px;
+        background-color: rgba(123, 121, 121, 0.99);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        z-index: 9;
+    }
+
+    .innerContent .purchaseSection .buyButton {
+        margin-top: 10%;
+        padding: 5px;
+        width: 130px;
+        height: 80px;
+        border: 2px solid #468AA8;
+
+        color: #468AA8;
+        background-color: #d9d9d9;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .innerContent .purchaseSection .buyButton:hover {
+        padding: 10px;
+        width: 130px;
+        height: 80px;
+        border: 2px solid #c48181;
+
+        color: white;
+        background-color: #e69898;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .sizeOptions {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-evenly;
+        font-size: large;
+    }
 }

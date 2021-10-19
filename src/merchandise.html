@@ -8,177 +8,296 @@
     <link rel="stylesheet" href="css/merchContainer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://stark-reef-50136.herokuapp.com/https://kit.fontawesome.com/a076d05399.js'
-        crossorigin='anonymous'></script>
+            crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="particles.js"></script>
+
+    <script>
+      function toggleModal(event) {
+        const modal = document.getElementById('modal');
+        const cards = document.getElementsByClassName('cardDiv');
+
+        if (modal.className === 'merchContainer displayModal') {
+          modal.className = 'merchContainer hiddenModal';
+          for (let i = 0; i < cards.length; i++) {
+            if (cards[i]) {
+              cards[i].className = 'card cardDiv';
+            }
+          }
+        }
+        else {
+          modal.className = 'merchContainer displayModal';
+          for (let i = 0; i < cards.length; i++) {
+            if (cards[i]) {
+              cards[i].className = 'cardsOverlay cardDiv';
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+        function checkRating(rating) {
+          const stars = document.getElementsByClassName("fa fa-star");
+          for (let i = 0; i < stars.length; i++) {
+            if (stars[i] && i <= rating) {
+                stars[i].className = 'fa fa-star checked';
+            }
+            else if (stars[i]) {
+              stars[i].className = 'fa fa-star';
+            }
+          }
+        }
+    </script>
+
+    <script>
+      function testClick(event) {
+        const modal = document.getElementById('modal');
+        if (modal.className === 'merchContainer displayModal' && event.target.className !== 'fa fa-plus-circle') {
+          let xCoord = event.x;
+          let yCoord = event.y;
+
+          if (!(xCoord >= modal.getBoundingClientRect().left
+            && xCoord <= modal.getBoundingClientRect().right
+            && yCoord >= modal.getBoundingClientRect().top
+            && yCoord <= modal.getBoundingClientRect().bottom))
+          {
+            toggleModal(event);
+          }
+        }
+      }
+    </script>
+
+    <script>
+        function changeActive(sizeOption) {
+          const sizings = document.getElementsByClassName('sizing');
+
+          for (let i = 0; i < sizings.length; i++) {
+            if (sizings[i] && sizeOption === 's' && i === 0) {
+                sizings[i].id = 'active';
+            }
+            else if (sizings[i] && sizeOption === 'm' && i === 1) {
+              sizings[i].id = 'active';
+            }
+            else if (sizings[i] && sizeOption === 'l' && i === 2) {
+              sizings[i].id = 'active';
+            }
+            else {
+              sizings[i].id = '';
+            }
+          }
+        }
+    </script>
 
 </head>
 
 <body>
-    <div class="nav">
-        <div class="logo">
-            <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
-        </div>
-        <ul class='navbar'>
-            <li><a href="iotWaterMonitoring.html">Projects</a></li>
-            <li><a href="cryptoEcommerce.html">About Us</a></li>
-            <li><a href="facialRecognition.html">Contact Us</a></li>
-            <li><a href="merchandise.html" class="active">Merchandise</a></li>
-        </ul>
-        </div>
-        <div id="bubbleBackdrop"></div>
+<div class="nav">
+    <div class="logo">
+        <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
+    </div>
+    <ul class='navbar'>
+        <li><a href="iotWaterMonitoring.html">Projects</a></li>
+        <li><a href="cryptoEcommerce.html">About Us</a></li>
+        <li><a href="facialRecognition.html">Contact Us</a></li>
+        <li><a href="merchandise.html" class="active">Merchandise</a></li>
+    </ul>
+</div>
+<div id="bubbleBackdrop"></div>
 
-        <div class="contentSection" style="background-color: transparent;">
-            <div class="innerContent">
-                <div class="merchContainer">
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/cap-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+<div class="contentSection" style="background-color: transparent;">
+    <div class="innerContent" onclick="testClick(event)">
+        <!-- modal -->
+        <div class="merchContainer hiddenModal" id="modal">
+            <div class="modalPadding"></div>
+            <div class="modalContent">
+                <div class="card leftModal">
+                    <div class="innerCard">
+                        <div class="productImage">
+                            <img src="img/cap-1@1x.png" alt="">
+                        </div>
+                        <div class="productDetails">
+                            <div class="bottomDetails">
+                                <div class="price"><h2>R230.99</h2></div>
+                                <div class="available"><h2>5 Available</h2></div>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/shirt-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+                <div class="productInfo rightModal">
+                    <h2>BTech Baseball Cap</h2>
+                    <div class="popularity">
+                        <p>
+                        <span>Rating: </span>
+                        <span class="fa fa-star checked" id="star1" onclick="checkRating(0)"></span>
+                        <span class="fa fa-star checked" id="star2" onclick="checkRating(1)"></span>
+                        <span class="fa fa-star checked" id="star3" onclick="checkRating(2)"></span>
+                        <span class="fa fa-star" id="star4" onclick="checkRating(3)"></span>
+                        <span class="fa fa-star" id="star5" onclick="checkRating(4)"></span>
+                        </p>
+                    </div>
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eos ab eligendi illo molestiae saepe voluptas, ratione quia ex natus, enim, sunt obcaecati nisi eveniet?</p>
+                    <div class="sizeOptions">
+                        <div class="sizing small" id="active" onclick="changeActive('s')">
+                            S
+                        </div>
+                        <div class="sizing medium" onclick="changeActive('m')">
+                            M
+                        </div>
+                        <div class="sizing large" onclick="changeActive('l')">
+                            L
+                        </div>
+                    </div>
+                    <div class="purchaseSection">
+                        <button class="buyButton" onclick="toggleModal(event)">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modalPadding" id="leftModalPadding"><i class="fa fa-close" onclick="toggleModal(event)"></i></div>
+        </div>
+        <!-- end modal -->
+        <div class="merchContainer">
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/cap-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/iotdevice-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/shirt-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/cap-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/iotdevice-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/shirt-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/cap-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/iotdevice-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/shirt-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/cap-1@1x.png" alt="">
-                            </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/iotdevice-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="productImage">
-                                <img src="img/shirt-1@1x.png" alt="">
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/cap-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
-                            <div class="productDetails">
-                                <div class="bottomDetails">
-                                    <div class="price">R230.99</div>
-                                    <div class="productLinks">
-                                        <a href=""><i class="fa fa-heart"></i></a>
-                                        <a href=""><i class="fa fa-plus-circle"></i></a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card cardDiv">
+                <div class="innerCard">
+                    <div class="productImage">
+                        <img src="img/shirt-1@1x.png" alt="">
+                    </div>
+                    <div class="productDetails">
+                        <div class="bottomDetails">
+                            <div class="price">R230.99</div>
+                            <div class="productLinks">
+                                <a href="#" onclick="toggleModal(event)"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Check out our latest update on
-                <a href="#">
-                    <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
-                </a>
-            </p>
-        </div>
-        <script>
+    </div>
+</div>
+<div class="footer">
+    <p>Check out our latest update on
+        <a href="#">
+            <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
+        </a>
+    </p>
+</div>
+<script>
 
-            $(document).ready(function () {
+  $(document).ready(function () {
 
 
 
-                particlesJS.load('bubbleBackdrop','generalConf.json');
+    particlesJS.load('bubbleBackdrop','generalConf.json');
 
-            });
-        </script>
+  });
+</script>
 </body>
 
 </html>

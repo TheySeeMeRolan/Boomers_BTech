@@ -260,7 +260,7 @@ span:hover {
 
 #active {
     background-color: rgba(214, 214, 214, 0.26);
-    color: #707070;
+    color: black;
 }
 
 .innerContent .purchaseSection .buyButton {

@@ -1,0 +1,101 @@
+.aboutMeSection {
+    display: grid;
+    grid-template-rows: 6fr 6fr;
+    grid-gap: 10px;
+    height: 100%;
+
+}
+
+.aboutMeItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMeCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 90%;
+    border-radius: 15px;
+}
+
+
+.aboutMeCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.innerAboutMeCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.aboutMeCard:hover .innerAboutMeCard {
+    transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+
+.cardFront {
+    display: flex;
+    background-color: #707070;
+    color: black;
+    overflow: hidden;
+}
+
+.profileImg {
+    width: 60%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.profileImg img {
+    width: 100%;
+    border-radius: 15px 0 15px 0;
+    object-fit: cover;
+}
+
+.profileDescription {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: whitesmoke;
+}
+
+.cardBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #468AA8;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+

@@ -59,7 +59,30 @@ html, * {
 
 }
 
+@media screen and (min-width: 1500px) {
+  #listScrollBox
+{
+  height: 5vh;
+  display:inline-block;
+  overflow: hidden;
 
+/* margin-top: -1.3vh; */
+
+}
+}
+
+@media screen and (max-width: 1500px) {
+  #listScrollBox
+{
+  height: 5vh;
+  display:inline-block;
+  overflow: hidden;
+  top: 10px;
+  position: relative;
+}
+}
+
+/* 
 #listScrollBox
 {
   height: 5vh;
@@ -67,7 +90,7 @@ html, * {
   overflow: hidden;
 
 
-}
+} */
 #listScroll
 {
 
@@ -235,8 +258,8 @@ p {
 
 .innerContent {
 
-  top: 50%;
-  left:70%;
+  top: 55%;
+  left:77%;
   transform: translate(-30%, -50%);
   text-align: center;
   /* height: 9vh; */
@@ -250,16 +273,38 @@ p {
 
 
 }
+/* .innerContent:hover{
+  animation:float_up 5s linear, float_left  5s ease-in-out alternate ;
+  animation-fill-mode: forwards;
+
+
+} */
+
+
+@keyframes float_left {
+   0% { margin-left: 0vw; }
+   50% { margin-left: 8vw; }
+  100% { margin-left: 0vw; }
+
+}
+
+
+@keyframes float_up {
+  0% { margin-bottom: 0vh; }
+  100% { margin-bottom: 800vh; }
+}
+
+
 
 @keyframes attention {
-   0% { transform:translate(0,0) }
-  88% { transform:translate(0,0) }
-  91% { transform:translate(5px,0) }
-  93% { transform:translate(0,0) }
-  94% { transform:translate(5px,0) }
-  96% { transform:translate(0,0) }
-  98% { transform:translate(5px,0) }
-  100% { transform:translate(0,0) }
+  0% { transform:translate(0,0) }
+ 88% { transform:translate(0,0) }
+ 91% { transform:translate(5px,0) }
+ 93% { transform:translate(0,0) }
+ 94% { transform:translate(5px,0) }
+ 96% { transform:translate(0,0) }
+ 98% { transform:translate(5px,0) }
+ 100% { transform:translate(0,0) }
 }
 
 .innerContent button {

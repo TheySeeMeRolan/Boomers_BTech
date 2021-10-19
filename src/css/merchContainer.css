@@ -186,9 +186,14 @@
 }
 
 .leftModal {
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: auto;
     height: fit-content;
+    justify-content: center;
+    background-color: #7d7b7b;
+    padding: 10% 0 10% 0;
+    border: unset;
 }
 
 .rightModal {
@@ -298,7 +303,7 @@ span:hover {
 
 #modal .modalContent .innerCard {
     background-color: #468AA8;
-    box-shadow: rgb(252, 252, 252) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    border-radius: 5px;
 }
 
 

@@ -198,7 +198,7 @@
 
 .rightModal {
     text-align: center;
-    margin-top: 20%;
+    margin-top: auto;
     margin-bottom: 20%;
     height: auto;
     color: whitesmoke;
@@ -315,7 +315,7 @@ span:hover {
         gap: 0;
 
         width: 50%;
-        height: 70%;
+        height: 75%;
         margin-left: 25%;
 
         border-radius: 10px;

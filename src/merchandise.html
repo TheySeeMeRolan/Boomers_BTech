@@ -51,16 +51,14 @@
     </script>
 
     <script>
-      function testClick(event) {
+      function checkClickCoordinate(event) {
         const modal = document.getElementById('modal');
         if (modal.className === 'merchContainer displayModal' && event.target.className !== 'fa fa-plus-circle') {
           let xCoord = event.x;
           let yCoord = event.y;
 
-          if (!(xCoord >= modal.getBoundingClientRect().left
-            && xCoord <= modal.getBoundingClientRect().right
-            && yCoord >= modal.getBoundingClientRect().top
-            && yCoord <= modal.getBoundingClientRect().bottom))
+          if (!(xCoord >= modal.getBoundingClientRect().left && xCoord <= modal.getBoundingClientRect().right
+            && yCoord >= modal.getBoundingClientRect().top && yCoord <= modal.getBoundingClientRect().bottom))
           {
             toggleModal(event);
           }
@@ -106,7 +104,7 @@
 <div id="bubbleBackdrop"></div>
 
 <div class="contentSection" style="background-color: transparent;">
-    <div class="innerContent" onclick="testClick(event)">
+    <div class="innerContent" onclick="checkClickCoordinate(event)">
         <!-- modal -->
         <div class="merchContainer hiddenModal" id="modal">
             <div class="modalPadding"></div>

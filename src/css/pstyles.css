@@ -45,7 +45,7 @@ background-color: #0f214b;
 {
   color: #adda88;
 
-  
+
 }
 #pop:hover{
   animation: pop 0.9s ease-in infinite;
@@ -91,7 +91,7 @@ background-color: #0f214b;
 }
 }
 
-/* 
+/*
 #listScrollBox
 {
   height: 5vh;
@@ -124,8 +124,8 @@ background-color: #0f214b;
    34% {transform:translate3d(0,-34%,0);}
    51% {transform:translate3d(0,-68%,0);}
    68% {transform:translate3d(0,-68%,0);}
-   86% {transform:translate3d(0,0,0);}  
-  100% {transform:translate3d(0,0,0);} 
+   86% {transform:translate3d(0,0,0);}
+  100% {transform:translate3d(0,0,0);}
 }
 
 body {
@@ -356,7 +356,7 @@ p {
   /* padding-top: 7.9px; */
   /* padding-bottom: 7.9px; */
   display: flex;             /* establish flex container */
-  align-items: center;      
+  align-items: center;
   justify-content: center;
 
 }

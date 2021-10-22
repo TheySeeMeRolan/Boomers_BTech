@@ -22,6 +22,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "cors": "^2.8.5",
     "particlesjs": "^2.2.3"
   }

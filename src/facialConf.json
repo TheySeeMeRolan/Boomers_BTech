@@ -9,9 +9,9 @@
         },
         "color": {
             "value": [
-                "#40b458",
+                "#2d5ab8",
                 "#468AA8",
-                "#FFB6C1"
+                "#87f3f2"
             ]
         },
         "shape": {
@@ -19,9 +19,9 @@
             "stroke": {
                 "width": 0,
                 "color": [
-                    "#40b458",
+                    "#2d5ab8",
                     "#468AA8",
-                    "FFB6C1"
+                    "#87f3f2"
                 ]
             },
             "polygon": {

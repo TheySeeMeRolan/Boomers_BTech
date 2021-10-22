@@ -37,6 +37,14 @@
 
 }
 
+.iName
+{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 20px;
+    color:#e69898;
+    font-weight: 600;
+}
 .card img {
 
     height: 200px;
@@ -238,7 +246,7 @@ span:hover {
     font-size: large;
 }
 
-.small, .medium, .large {
+.small {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,7 +257,39 @@ span:hover {
     border: 1px solid whitesmoke;
     border-radius: 5px;
     padding: 5%;
+    color:#e69898;
 }
+
+ .medium {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5%;
+    color: #adda88;
+}
+
+ .large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5%;
+    color: #5290aa;
+
+}
+
+
 
 .sizeOptions div:hover {
     background-color: rgba(214, 214, 214, 0.26);

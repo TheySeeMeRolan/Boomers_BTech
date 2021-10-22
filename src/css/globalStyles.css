@@ -49,7 +49,7 @@ p {
 }
 
 .nav {
-
+    font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-content: center;

@@ -312,25 +312,25 @@ p {
      /*   top: 50%;
         left: 50%;
         transform: translate(50%, 50%); */
-    
+        /* --animate-duration: 800ms; */
+        /* --animate-delay: 2s; */
+        /* animation: bounce;
+        animation-duration: 1s; */
   }
 
 
   #contactUsForm
   {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size:4vw;
+    font-size:1vw;
     border-radius: 15px;
-    background-color: blue;
+    background-color: #468AA8;
     height: 50vh;
     width: 50vw;
-    text-align: center;
-
+    /* #40b458","#468AA8","FFB6C1" */
     
   }
 
@@ -341,8 +341,8 @@ p {
       height: fit-content;
       width: fit-content;
       z-index: 200;
-      animation: backInUp; /* referring directly to the animation's @keyframe declaration */
-      animation-duration: 1s; /* don't forget to set a duration! */
+      animation: backInUp; 
+      animation-duration: 1s; 
       top:5%;
       bottom: 0;
       left: 0;
@@ -350,3 +350,30 @@ p {
       margin: auto;
   }
   
+  .shortInput
+  {
+      border-radius: 10px;
+      margin-top: 3vh;
+      width: 22vw;
+      height: 10vh;
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+      -webkit-box-shadow: none!important;
+      box-shadow: none!important;
+      border: 1px solid rgba(0,0,0,.1)
+
+    }
+
+    input {
+        font-size: 3vh;
+        display:block;
+        margin-top: 0;
+    }
+
+    label {
+        font-size: 3vh;
+        display:block;
+        margin: 0;
+    }

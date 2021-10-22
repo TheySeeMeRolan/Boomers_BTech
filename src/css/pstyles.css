@@ -413,7 +413,7 @@ top: -3px;
 }
 
 
-#star-svg {
+#svgLine {
   /* background-color: red; */
   z-index: -2;
   position: absolute;

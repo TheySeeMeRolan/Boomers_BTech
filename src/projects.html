@@ -33,13 +33,13 @@
     </p>
   </div>
 
-<svg height="100%" width="100%" version="1.1" id="star-svg"
+<svg height="100%" width="100%" version="1.1" id="svgLine"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="501.084px" height="auto" viewBox="0 0 501.084 635" enable-background="new 0 0 501.084 788.504"
 	 xml:space="preserve">
 <defs>
 </defs>
-<path id="star-path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1,0v71c0,0,0.043,53.746,53.69,60.123
+<path id="line" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1,0v71c0,0,0.043,53.746,53.69,60.123
 c383.147,0.519,383.147,0.519,383.147,0.519S491.97,138,499.154,181s-28.758,62.692-55.787,67.846
 C55.841,249.54,55.841,249.54,55.841,249.54s-46.965,0.93-54.734,55.945c0,0-3.64,54.482,54.545,60.748h382.205
 c0,0,62.114,5.55,61.297,58.409c0,0,3.341,49.212-56.738,59.285l-384.09,0.383c0,0-51.944,3.094-57.216,56.142
@@ -56,3 +56,47 @@ c0,0-3.255,53.781,55.198,60.805c0.659,0.079,1.326,0.153,2.001,0.22l383.042,0.287
 
     });
   </script>
+
+<script>
+
+// Get a reference to the <path>
+  var path = document.querySelector('#line');
+
+// Get length of path... ~577px in this case
+var pathLength = path.getTotalLength();
+
+// Make very long dashes (the length of the path itself)
+path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+// Offset the dashes so the it appears hidden entirely
+path.style.strokeDashoffset = pathLength;
+
+// Jake Archibald says so
+// https://jakearchibald.com/2013/animated-line-drawing-svg/
+path.getBoundingClientRect();
+
+// When the page scrolls...
+window.addEventListener("scroll", function(e) {
+ 
+  // What % down is it? 
+  // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
+  // Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+  // Length to offset the dashes
+  var drawLength = pathLength * scrollPercentage;
+  
+  // Draw in reverse
+  path.style.strokeDashoffset = pathLength - drawLength;
+    
+  // When complete, remove the dash array, otherwise shape isn't quite sharp
+ // Accounts for fuzzy math
+  if (scrollPercentage >= 0.99) {
+    path.style.strokeDasharray = "none";
+    
+  } else {
+    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+  }
+  
+});
+</script>

@@ -6,12 +6,16 @@
 html {
   line-height: 1.2;
   -webkit-text-size-adjust: 100%;
+overflow: hidden;
 
-
+}
+body{
+  overflow: hidden;
 }
 
 html, * {
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 #tDiv

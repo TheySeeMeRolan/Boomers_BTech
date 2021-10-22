@@ -7,74 +7,87 @@
     <link rel="stylesheet" href="css/contactUs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/projectPageStyle.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src='https://stark-reef-50136.herokuapp.com/https://kit.fontawesome.com/a076d05399.js'
-            crossorigin='anonymous'></script>
+        crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="particles.js"></script>
 
 </head>
 
 <body>
-<div class="nav">
-    <div class="logo">
-        <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
+    <div class="nav">
+        <div class="logo">
+            <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
+        </div>
+        <ul class='navbar'>
+            <li><a href="iotWaterMonitoring.html">Projects</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactUs.html" class="active">Contact Us</a></li>
+            <li><a href="merchandise.html">Merchandise</a></li>
+        </ul>
     </div>
-    <ul class='navbar'>
-        <li><a href="iotWaterMonitoring.html">Projects</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
-        <li><a href="contactUs.html" class="active">Contact Us</a></li>
-        <li><a href="merchandise.html">Merchandise</a></li>
-    </ul>
-</div>
-<div id="bubbleBackdrop"></div>
+    <div id="bubbleBackdrop"></div>
 
-<div class="contentSection">
-    <div class="contentContainer">
-       
+    <div class="contentSection">
+        <div class="contentContainer">
+
+        </div>
     </div>
-</div>
 
- <animationWrapper >
-        <div id="contactUsContainer" >
-            <div id="contactUsHeader" class="animate__animated animate__jackInTheBox animate__delay-1s  animate__repeat-1" style="opacity: 1; ">
-               <span id="pop" >Pop </span> us a message!
+    <animationWrapper>
+        <div id="contactUsContainer">
+            <div id="contactUsHeader"
+                class="animate__animated animate__jackInTheBox animate__delay-1s  animate__repeat-1"
+                style="opacity: 1; ">
+                <span id="pop" class="animate__animated animate__bounce animate__delay-3s  animate__repeat-2">Pop </span> 
+                us a message!
 
             </div>
             <div id="contactUsForm">
+                <form>
                 <div style="display: flex; width: 50vw;align-items: center; justify-content: space-evenly;">
-                <div>
-                <label for="name">Name:</label>
-                <input id="name" type="text" class="shortInput"></input>
+                    <div style="margin-top: 2vw;">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" class="shortInput"></input>
+                    </div>
+                    <div style="margin-top: 2vw;">
+                        <label for="email">Email:</label>
+                        <input id="email" type="text" class="shortInput"></input>
+                    </div>
+
+                </div>
+                <div style=" width: 50vw;align-items: center; justify-content: space-evenly; margin-left: auto;margin-right: auto;">
+                    <div>
+                        <label for="msg" style="margin-left: 2vw; margin-top: 1vw;">Message:</label>
                     </div>
                     <div>
-                <label for="email">First name:</label>
-                <input id="email" type="text" class="shortInput"></input>
-            </div>
-            </div>
+                        <textarea id="msg" type="text" class="longInput"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Send">
+
+            </form>
             </div>
         </div>
     </animationWrapper>
-<div class="footer">
-    <p>Check out our latest update on
-        <a href="#">
-            <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
-        </a>
-    </p>
-</div>
+    <div class="footer">
+        <p>Check out our latest update on
+            <a href="#">
+                <img class="instaIcon" src="img/icon-awesome-instagram-1@1x.png" alt="">
+            </a>
+        </p>
+    </div>
 </body>
 <script>
 
-  $(document).ready(function () {
+    $(document).ready(function () {
 
 
 
-    particlesJS.load('bubbleBackdrop','generalConf.json');
+        particlesJS.load('bubbleBackdrop', 'generalConf.json');
 
-  });
+    });
 </script>
 
 </html>

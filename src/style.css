@@ -267,7 +267,7 @@ p {
   transform: translate(-30%, -50%);
   text-align: center;
   /* height: 9vh; */
-  background-color: antiquewhite;
+  background-color: transparent;
   position: absolute;
   animation: attention  6s ease infinite;
 

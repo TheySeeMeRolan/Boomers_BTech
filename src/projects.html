@@ -11,7 +11,12 @@
     <script src="particles.js"></script>
   </head>
 <body>
+<script>
+    $( document ).ready(function() {
+        $('#circleBottom').hide();
+});
 
+</script>
 <div class="nav" style="z-index: 999;">
     <div class="logo">
         <a id="logoA" href="index.html"><img src="img/BTech.png" alt=""></a>
@@ -185,6 +190,8 @@ $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 1300) {
     $('#circleBottom').fadeIn();
+    $('#circleBottom').show();
+
 
 
   } else {

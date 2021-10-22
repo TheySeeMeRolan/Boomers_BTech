@@ -91,10 +91,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #468AA8;
     color: white;
     transform: rotateY(180deg);
+}
+
+.profileLinks {
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.profileLinks:hover {
+    color: #e69898;
 }
 
 

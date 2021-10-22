@@ -39,6 +39,11 @@
 
 .iName
 {
+
+
+
+        margin-top: 10px;
+    
     text-align: left;
     margin-left: 30px;
     font-size: 20px;
@@ -124,13 +129,39 @@
 
 }
 
+.fa-plus-circle
+{
+    color: #d9d9d9;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #468AA8;
+    width: 20px;
+    height: 20px;
 
 
+
+}
+/* 
+.fa-plus-circle:hover
+{
+
+    width: 20px;
+    height: 20px;
+
+    color: #e69898;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #c48181
+
+} */
 .productDetails {
     padding-right: 10%;
-    padding-bottom: 20px;
+    padding-bottom: 0;
 }
 
+.fa-plus-circle {
+    width: 9vh;
+    height: 5vh;
+    transform: translate(-0%, -40%);
+}
 
 .bottomDetails {
     overflow: hidden;
@@ -162,8 +193,11 @@
     font-size: 20px;
 }
 
-.productLinks a:hover {
+.productLinks :hover {
+        
     color: #e69898;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #c48181
 }
 
 

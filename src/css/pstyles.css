@@ -439,3 +439,109 @@ top: -3px;
   margin-bottom: -20vh;
 
 } */
+
+.contentArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.projectSection {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 210vh;
+  width: 80%;
+  padding-top: 85%;
+  z-index: -1;
+}
+
+.p1, .p2, .p3, .p4, .p5 {
+  display: flex;
+  height: 80vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.animate__animated {
+  display: flex;
+  align-items: center;
+}
+
+.projectSection img {
+  height: 350px;
+  width: 450px;
+  padding-left: 10%;
+  padding-right: 10%;
+  object-fit: contain;
+
+}
+
+.p2, .p4 {
+  margin-right:60%;
+}
+
+.p1, .p3, .p5 {
+  margin-left: 60%;
+}
+
+.projectNavSection {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.projectNavSection button {
+
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #468AA8;
+
+  color: #468AA8;
+  background-color: #d9d9d9;
+  font-size: medium;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.projectNavSection button:hover {
+
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #c48181;
+
+  color: white;
+  background-color: #e69898;
+  font-size: medium;
+  text-align: center;
+
+}
+
+
+.projectNavSection a:link { text-decoration: none; }
+
+
+.projectNavSection a:visited { text-decoration: none; }
+
+
+.projectNavSection a:hover { text-decoration: none; }
+
+
+.projectNavSection a:active { text-decoration: none; }
